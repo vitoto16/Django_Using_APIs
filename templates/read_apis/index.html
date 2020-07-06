@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Django Blog content</h1>
+{% if posts %}
+{% for post in posts %}
+<p>The poster's username is: <strong>{{ post.author }}</strong>.</p>
+<p>The post's title is: <strong>{{ post.title }}</strong>.</p>
+<p>The post's content is: <strong>{{ post.content }}</strong>.</p>
+<p>The date posted is: <strong>{{ post.date_posted }}</strong>.</p>
+<br>
+{% endfor %}
+{% endif %}
+
+{% endblock %}
