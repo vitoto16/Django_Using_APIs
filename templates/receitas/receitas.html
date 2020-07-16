@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% include 'partials/_navbar.html' %}
+
+<div class="container">
+    <div class="py-5">
+        <h3 class="font-weight-bold mb-0">Receitas</h3>
+        <p class="font-italic text-muted mb-4">Receitas retiradas de <a href="appreceitas.herokuapp.com">appreceitas.herokuapp.com</a>.</p>
+        <div class="row">
+        {% for recipe in recipes %}
+          <!-- DEMO 1 Item-->
+          <div class="col-6 mb-3 p">
+            <div class="hover hover-1 text-white rounded"><img src="{{ recipe.foto_receita }}" alt="">
+              <div class="hover-overlay"></div>
+              <div class="hover-1-content px-5 py-4">
+                <h3 class="hover-1-title text-uppercase font-weight-bold mb-0">{{ recipe.nome_receita }}</h3>
+                <p class="hover-1-description font-weight-light mb-0">{{ recipe.modo_de_preparo|truncatewords:10 }}</p>
+              </div>
+            </div>
+          </div>
+        {% empty %}
+          <h4 class="font-weight-bold mb-0">Não existem receitas publicadas.</h4>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

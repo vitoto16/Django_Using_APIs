@@ -1,0 +1,23 @@
+{% load static %}
+{% block content %}
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <a href="{% url 'index' %}" class="navbar-brand">Consumer</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link" href="{% url 'index' %}">Home</a>
+          <a class="nav-item nav-link" href="{% url 'receitas-index' %}">Receitas</a>
+          <a class="nav-item nav-link" href="#">Blog</a>
+          <a class="nav-item nav-link" href="https://github.com/vitoto16">Source Codes</a>
+        </div>
+        <span class="navbar-text">
+            Site developed for learning purposes
+        </span>
+    </div>
+</nav>
+
+
+{% endblock %}
