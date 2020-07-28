@@ -1,14 +1,11 @@
-from django.shortcuts import render
 import requests
+from django.shortcuts import render
+from django.views.decorators.cache import cache_page
 
+@cache_page(720)
 def receitas_index(request):
-    is_cached = ('appreceitas_api_data' in request.session)
-
-    if not is_cached:
-        response = requests.get('https://appreceitas.herokuapp.com/api/lista-receitas/')
-        request.session['appreceitas_api_data'] = response.json()
-
-    appreceitas_api_data = request.session['appreceitas_api_data']
+    response = requests.get('https://appreceitas.herokuapp.com/api/lista-receitas/')
+    appreceitas_api_data = response.json()
 
     api_data = {
             'recipes': appreceitas_api_data,

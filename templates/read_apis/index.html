@@ -2,7 +2,47 @@
 {% block content %}
 
 {% include 'partials/_navbar.html' %}
-
-<h1><a href="{% url 'receitas-index' %}">Página de receitas</a></h1>
+<div class="container">
+    <!--<div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <img src="https://appreceitas.s3.amazonaws.com/fotos/06/07/2020/suco-verde-pode-ajudar-a-eliminar-toxinas-e-ajudar-no-emagrecimento-5db_Gqlc4OQ.jpg?AWSAccessKeyId=AKIA2OZFDR3HDEX7PQGV&Signature=UJp%2B5ErjC31ShXdRiRv5Zci42vw%3D&Expires=1595003740" alt="Card Image" class="card-img">
+                <div class="card-img-overlay">
+                    <div class="card-header">
+                        <h2>Catálogo de receitas</h2>
+                    </div>
+                    <div class="card-footer text-right">
+                        <h4 class="card-text">As melhores receitas retiradas de <a href="https://appreceitas.herokuapp.com">appreceitas.herokuapp.com</a>.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card">
+                <img src="https://appreceitas.s3.amazonaws.com/fotos/06/07/2020/suco-verde-pode-ajudar-a-eliminar-toxinas-e-ajudar-no-emagrecimento-5db_Gqlc4OQ.jpg?AWSAccessKeyId=AKIA2OZFDR3HDEX7PQGV&Signature=UJp%2B5ErjC31ShXdRiRv5Zci42vw%3D&Expires=1595003740" alt="Card Image" class="card-img">
+                <div class="card-img-overlay">
+                    <div class="card-header">
+                        <h2>Blog Posts</h2>
+                    </div>
+                    <div class="card-footer text-right">
+                        <h4 class="card-text">Posts from <a href="https://django-blog-corey-tutorial.herokuapp.com">django-blog-corey-tutorial.herokuapp.com</a>.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="https://appreceitas.s3.amazonaws.com/fotos/06/07/2020/suco-verde-pode-ajudar-a-eliminar-toxinas-e-ajudar-no-emagrecimento-5db_Gqlc4OQ.jpg?AWSAccessKeyId=AKIA2OZFDR3HDEX7PQGV&Signature=UJp%2B5ErjC31ShXdRiRv5Zci42vw%3D&Expires=1595003740" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="..." alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="..." alt="Third slide">
+        </div>
+      </div>
+    </div>
 
 {% endblock %}
